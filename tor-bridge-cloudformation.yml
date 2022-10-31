@@ -1,0 +1,117 @@
+AWSTemplateFormatVersion: "2010-09-09"
+Description: "CloudFormation template to deploy a free-tier Tor bridge"
+Parameters:
+    LatestAmiId:
+      Type: 'AWS::SSM::Parameter::Value<AWS::EC2::Image::Id>'
+      Default: '/aws/service/canonical/ubuntu/server/jammy/stable/current/amd64/hvm/ebs-gp2/ami-id'
+Resources:
+    bridgeVPC:
+      Type: AWS::EC2::VPC
+      Properties:
+        CidrBlock: 10.0.0.0/16
+    subnetTorbridge:
+      Type: AWS::EC2::Subnet
+      Properties:
+        VpcId:
+          Ref: bridgeVPC
+        CidrBlock: 10.0.0.0/16
+        MapPublicIpOnLaunch: true
+    torInternetGateway:
+      Type: AWS::EC2::InternetGateway
+    torInternetGatewayCFAttachment:
+      Type: AWS::EC2::VPCGatewayAttachment
+      Properties: 
+        InternetGatewayId: 
+          Ref: torInternetGateway
+        VpcId: 
+          Ref: bridgeVPC
+    torRouteTableCF:
+      Type:  AWS::EC2::RouteTable
+      Properties:
+        VpcId: 
+          Ref: bridgeVPC
+    PublicSubnetRouteTableAssociation:
+        Type: AWS::EC2::SubnetRouteTableAssociation
+        Properties:
+          RouteTableId: !Ref torRouteTableCF
+          SubnetId: !Ref subnetTorbridge
+    IGWRoute:
+      Type: AWS::EC2::Route
+      Properties: 
+        DestinationCidrBlock: 0.0.0.0/0
+        GatewayId:
+          Ref: torInternetGateway
+        RouteTableId:
+          Ref: torRouteTableCF
+    EC2Instance:
+        Type: "AWS::EC2::Instance"
+        Properties:
+            ImageId: !Ref LatestAmiId
+            InstanceType: "t2.micro"
+            Tenancy: "default"
+            SubnetId: !Ref subnetTorbridge
+            EbsOptimized: false
+            SecurityGroupIds: 
+              - !Ref EC2SecurityGroup
+            SourceDestCheck: true
+            BlockDeviceMappings: 
+              - 
+                DeviceName: "/dev/sda1"
+                Ebs: 
+                    VolumeSize: 8
+                    VolumeType: "gp2"
+                    DeleteOnTermination: true
+            HibernationOptions: 
+                Configured: false
+            EnclaveOptions: 
+                Enabled: false
+            UserData:
+              Fn::Base64:
+                !Sub |
+                  #!/bin/bash -xe
+                  sudo apt update
+                  sudo apt-get install ec2-instance-connect -y
+                  sudo apt install tor -y
+                  sudo apt-get install obfs4proxy -y
+                  sudo touch /etc/tor/torrc
+                  sudo bash -c 'echo -e "BridgeRelay 1\nORPort 8000\nAccountingMax 14.9 GBytes\nAccountingStart month 1 00:00\nServerTransportListenAddr obfs4 0.0.0.0:8080\nExtORPort auto" >> /etc/tor/torrc'
+                  sudo systemctl enable --now tor.service
+                  sudo systemctl restart tor.service
+
+    EC2SecurityGroup:
+        Type: "AWS::EC2::SecurityGroup"
+        Properties:
+            GroupDescription: "Allows ingress/egress for Tor bridge"
+            GroupName: "torbridge"
+            VpcId: !Ref bridgeVPC
+            SecurityGroupIngress:
+              - 
+                CidrIp: "0.0.0.0/0"
+                FromPort: 8080
+                IpProtocol: "tcp"
+                ToPort: 8080
+              - 
+                CidrIp: "0.0.0.0/0"
+                FromPort: 8000
+                IpProtocol: "tcp"
+                ToPort: 8000
+              - 
+                IpProtocol: tcp
+                FromPort: 22
+                ToPort: 22
+                CidrIp: 0.0.0.0/0
+            SecurityGroupEgress: 
+              - 
+                CidrIp: "0.0.0.0/0"
+                FromPort: 8080
+                IpProtocol: "tcp"
+                ToPort: 8080
+              - 
+                CidrIp: "0.0.0.0/0"
+                IpProtocol: "-1"
+              - 
+                CidrIp: "0.0.0.0/0"
+                FromPort: 8000
+                IpProtocol: "tcp"
+                ToPort: 8000
+
