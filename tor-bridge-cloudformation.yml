@@ -77,12 +77,10 @@ Resources:
                   sudo bash -c 'echo -e "BridgeRelay 1\nORPort 8000\nAccountingMax 14.9 GBytes\nAccountingStart month 1 00:00\nServerTransportListenAddr obfs4 0.0.0.0:8080\nExtORPort auto" >> /etc/tor/torrc'
                   sudo systemctl enable --now tor.service
                   sudo systemctl restart tor.service
-
     EC2SecurityGroup:
         Type: "AWS::EC2::SecurityGroup"
         Properties:
             GroupDescription: "Allows ingress/egress for Tor bridge"
-            GroupName: "torbridge"
             VpcId: !Ref bridgeVPC
             SecurityGroupIngress:
               - 
@@ -103,4 +101,9 @@ Resources:
                 FromPort: 22
                 ToPort: 22
                 CidrIp: "10.10.10.0/24"
+            SecurityGroupEgress:
+              - Description: Allow outbound traffic
+                IpProtocol: "-1"
+                CidrIp: "0.0.0.0/0"
+
 
