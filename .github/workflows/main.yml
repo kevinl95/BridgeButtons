@@ -1,9 +1,14 @@
-- name: cfn-security
-  # You may pin to the exact commit or the version.
-  # uses: grolston/cfn-security@a9942f57239ba6ed185cb112bbbac7337b350edb
-  uses: grolston/cfn-security@v2.0.0
-  with:
-    # directory within git repo to scan cloudformation templates
-    cloudformation_directory: "."
-    # scanner used to run security test. Options are "cfn-lint", "cfn-nag", "checkov", "all"
-    scanner: "all"
+name: cfn-security sast
+
+on: [push]
+
+jobs:
+  ## all scans
+  security-scan-nag:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - uses: grolston/cfn-security@master
+      with:
+        cloudformation_directory: "."
+        scanner: "all"
