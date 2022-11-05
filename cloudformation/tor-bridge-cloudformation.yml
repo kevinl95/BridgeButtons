@@ -97,10 +97,10 @@ Resources:
                 ToPort: 8000
               - 
                 Description: SSH Ingress
-                IpProtocol: tcp
-                FromPort: 22
-                ToPort: 22
-                CidrIp: "0.0.0.0/0"
+                - CidrIp: '10.0.0.0/16'
+                  FromPort: 22
+                  ToPort: 22
+                  IpProtocol: -1
             SecurityGroupEgress:
               - Description: Allow outbound traffic
                 IpProtocol: "-1"
