@@ -20,30 +20,30 @@ Tor distributes bridges to users who request them over email, or via https://bri
 
 First, sign up for an AWS account [here](https://portal.aws.amazon.com/billing/signup#/start/email). While you will be prompted for payment information, your bridge is expected to run on the free tier.
 
-Next, find the region you would like to deploy to in the world and click the corresponding button:
+Next, find the region you would like to deploy to in the world and click the corresponding button. Consider deploying your bridge closer to a region that needs Tor bridges. For example, if you wish to help Iranian activists consider deploying to Bahrain.
 
 | Region | Bridge Button |
 |--------|---------------|
-| US East (Ohio)       |               |
-| US East (N. Virginia)       |               |
+| US East (Ohio)       | [![Create Bridge](https://s3.amazonaws.com/cloudformation-examples/cloudformation-launch-stack.png)](https://console.aws.amazon.com/cloudformation/home?region=us-east-2#/stacks/new?stackName=torbridge&templateURL=https://bridgebuttons.s3.amazonaws.com/tor-bridge-cloudformation.yml)              |
+| US East (N. Virginia)       | [![Create Bridge](https://s3.amazonaws.com/cloudformation-examples/cloudformation-launch-stack.png)](https://console.aws.amazon.com/cloudformation/home?region=us-east-1#/stacks/new?stackName=torbridge&templateURL=https://bridgebuttons.s3.amazonaws.com/tor-bridge-cloudformation.yml)                   |
 | US West (N. California)       |               |
 | US West (Oregon)       |               |
 | Africa (Cape Town)       |               |
-|        |               |
-|        |               |
-|        |               |
-|        |               |
-|        |               |
-|        |               |
-|        |               |
-|        |               |
-|        |               |
-|        |               |
-|        |               |
-|        |               |
-|        |               |
-|        |               |
-|        |               |
-|        |               |
-|        |               |
-|        |               |
+| Asia Pacific (Hong Kong)       |               |
+| Asia Pacific (Jakarta)       |               |
+| Asia Pacific (Mumbai)       |               |
+| Asia Pacific (Osaka)       |               |
+| Asia Pacific (Seoul)       |               |
+| Asia Pacific (Singapore)       |               |
+| Asia Pacific (Sydney)       |               |
+| Asia Pacific (Tokyo)       |               |
+| Canada (Central)       |               |
+| Europe (Frankfurt)       |               |
+| Europe (Ireland)       |               |
+| Europe (London)       |               |
+| Europe (Milan)       |               |
+| Europe (Paris)       |               |
+| Europe (Stockholm)       |               |
+| Middle East (Bahrain)       |               |
+| Middle East (UAE)       |               |
+| South America (São Paulo)       |               |
