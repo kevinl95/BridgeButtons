@@ -6,7 +6,7 @@
 
 Bridge Buttons are one of the easiest ways to stand up for the journalists, activists, and vulnerable citizens around the world that depend on Tor to use the internet safely. Tor is an anonymity network that helps keep its users anonymous by routing their internet traffic through multiple different machines run by volunteers, which conceals their location and identity. Unfortunately regimes around the world have blocked access to Tor, which is why Tor bridges were created. They are brand-new access points these regimes do not know about that can be rapidly deployed and torn down faster than they can be blocked, letting these users get back online!
 
-Bridge Buttons let you deploy a Tor bridge with a single click to any Amazon Web Services (AWS) region. These bridges come pre-configured to stay with in AWS' free tier for one year! While you will be prompted for a payment method when first signing up for AWS, these bridges are configured to use AWS' free computing product and have a Tor configuration that caps the bandwidth passing through your bridge at under 15GB.
+Bridge Buttons let you deploy a Tor bridge with a single click to any Amazon Web Services (AWS) region. These bridges come pre-configured to stay within AWS' free tier for one year! While you will be prompted for a payment method when first signing up for AWS, these bridges are configured to use AWS' free computing product and have a Tor configuration that caps the bandwidth passing through your bridge at under 15GB.
 
 # What is a Tor bridge?
 
