@@ -26,24 +26,24 @@ Next, find the region you would like to deploy to in the world and click the cor
 |--------|---------------|
 | US East (Ohio)       | [![Create Bridge](https://s3.amazonaws.com/cloudformation-examples/cloudformation-launch-stack.png)](https://console.aws.amazon.com/cloudformation/home?region=us-east-2#/stacks/new?stackName=torbridge&templateURL=https://bridgebuttons.s3.amazonaws.com/tor-bridge-cloudformation.yml)              |
 | US East (N. Virginia)       | [![Create Bridge](https://s3.amazonaws.com/cloudformation-examples/cloudformation-launch-stack.png)](https://console.aws.amazon.com/cloudformation/home?region=us-east-1#/stacks/new?stackName=torbridge&templateURL=https://bridgebuttons.s3.amazonaws.com/tor-bridge-cloudformation.yml)                   |
-| US West (N. California)       |               |
-| US West (Oregon)       |               |
-| Africa (Cape Town)       |               |
-| Asia Pacific (Hong Kong)       |               |
-| Asia Pacific (Jakarta)       |               |
-| Asia Pacific (Mumbai)       |               |
-| Asia Pacific (Osaka)       |               |
-| Asia Pacific (Seoul)       |               |
-| Asia Pacific (Singapore)       |               |
-| Asia Pacific (Sydney)       |               |
-| Asia Pacific (Tokyo)       |               |
-| Canada (Central)       |               |
-| Europe (Frankfurt)       |               |
-| Europe (Ireland)       |               |
-| Europe (London)       |               |
-| Europe (Milan)       |               |
-| Europe (Paris)       |               |
-| Europe (Stockholm)       |               |
-| Middle East (Bahrain)       |               |
-| Middle East (UAE)       |               |
-| South America (São Paulo)       |               |
+| US West (N. California)       | [![Create Bridge](https://s3.amazonaws.com/cloudformation-examples/cloudformation-launch-stack.png)](https://console.aws.amazon.com/cloudformation/home?region=us-west-1#/stacks/new?stackName=torbridge&templateURL=https://bridgebuttons.s3.amazonaws.com/tor-bridge-cloudformation.yml)              |
+| US West (Oregon)       | [![Create Bridge](https://s3.amazonaws.com/cloudformation-examples/cloudformation-launch-stack.png)](https://console.aws.amazon.com/cloudformation/home?region=us-west-2#/stacks/new?stackName=torbridge&templateURL=https://bridgebuttons.s3.amazonaws.com/tor-bridge-cloudformation.yml)              |
+| Africa (Cape Town)       | [![Create Bridge](https://s3.amazonaws.com/cloudformation-examples/cloudformation-launch-stack.png)](https://console.aws.amazon.com/cloudformation/home?region=af-south-1#/stacks/new?stackName=torbridge&templateURL=https://bridgebuttons.s3.amazonaws.com/tor-bridge-cloudformation.yml)              |
+| Asia Pacific (Hong Kong)       | [![Create Bridge](https://s3.amazonaws.com/cloudformation-examples/cloudformation-launch-stack.png)](https://console.aws.amazon.com/cloudformation/home?region=ap-east-1#/stacks/new?stackName=torbridge&templateURL=https://bridgebuttons.s3.amazonaws.com/tor-bridge-cloudformation.yml)              |
+| Asia Pacific (Jakarta)       | [![Create Bridge](https://s3.amazonaws.com/cloudformation-examples/cloudformation-launch-stack.png)](https://console.aws.amazon.com/cloudformation/home?region=ap-southeast-3#/stacks/new?stackName=torbridge&templateURL=https://bridgebuttons.s3.amazonaws.com/tor-bridge-cloudformation.yml)              |
+| Asia Pacific (Mumbai)       | [![Create Bridge](https://s3.amazonaws.com/cloudformation-examples/cloudformation-launch-stack.png)](https://console.aws.amazon.com/cloudformation/home?region=ap-south-1#/stacks/new?stackName=torbridge&templateURL=https://bridgebuttons.s3.amazonaws.com/tor-bridge-cloudformation.yml)              |
+| Asia Pacific (Osaka)       | [![Create Bridge](https://s3.amazonaws.com/cloudformation-examples/cloudformation-launch-stack.png)](https://console.aws.amazon.com/cloudformation/home?region=ap-northeast-3#/stacks/new?stackName=torbridge&templateURL=https://bridgebuttons.s3.amazonaws.com/tor-bridge-cloudformation.yml)              |
+| Asia Pacific (Seoul)       | [![Create Bridge](https://s3.amazonaws.com/cloudformation-examples/cloudformation-launch-stack.png)](https://console.aws.amazon.com/cloudformation/home?region=ap-northeast-2#/stacks/new?stackName=torbridge&templateURL=https://bridgebuttons.s3.amazonaws.com/tor-bridge-cloudformation.yml)              |
+| Asia Pacific (Singapore)       | [![Create Bridge](https://s3.amazonaws.com/cloudformation-examples/cloudformation-launch-stack.png)](https://console.aws.amazon.com/cloudformation/home?region=ap-southeast-1#/stacks/new?stackName=torbridge&templateURL=https://bridgebuttons.s3.amazonaws.com/tor-bridge-cloudformation.yml)              |
+| Asia Pacific (Sydney)       | [![Create Bridge](https://s3.amazonaws.com/cloudformation-examples/cloudformation-launch-stack.png)](https://console.aws.amazon.com/cloudformation/home?region=ap-southeast-2#/stacks/new?stackName=torbridge&templateURL=https://bridgebuttons.s3.amazonaws.com/tor-bridge-cloudformation.yml)              |
+| Asia Pacific (Tokyo)       | [![Create Bridge](https://s3.amazonaws.com/cloudformation-examples/cloudformation-launch-stack.png)](https://console.aws.amazon.com/cloudformation/home?region=ap-northeast-1#/stacks/new?stackName=torbridge&templateURL=https://bridgebuttons.s3.amazonaws.com/tor-bridge-cloudformation.yml)              |
+| Canada (Central)       | [![Create Bridge](https://s3.amazonaws.com/cloudformation-examples/cloudformation-launch-stack.png)](https://console.aws.amazon.com/cloudformation/home?region=ca-central-1#/stacks/new?stackName=torbridge&templateURL=https://bridgebuttons.s3.amazonaws.com/tor-bridge-cloudformation.yml)              |
+| Europe (Frankfurt)       | [![Create Bridge](https://s3.amazonaws.com/cloudformation-examples/cloudformation-launch-stack.png)](https://console.aws.amazon.com/cloudformation/home?region=eu-central-1#/stacks/new?stackName=torbridge&templateURL=https://bridgebuttons.s3.amazonaws.com/tor-bridge-cloudformation.yml)              |
+| Europe (Ireland)       | [![Create Bridge](https://s3.amazonaws.com/cloudformation-examples/cloudformation-launch-stack.png)](https://console.aws.amazon.com/cloudformation/home?region=eu-west-1#/stacks/new?stackName=torbridge&templateURL=https://bridgebuttons.s3.amazonaws.com/tor-bridge-cloudformation.yml)              |
+| Europe (London)       | [![Create Bridge](https://s3.amazonaws.com/cloudformation-examples/cloudformation-launch-stack.png)](https://console.aws.amazon.com/cloudformation/home?region=eu-west-2#/stacks/new?stackName=torbridge&templateURL=https://bridgebuttons.s3.amazonaws.com/tor-bridge-cloudformation.yml)              |
+| Europe (Milan)       | [![Create Bridge](https://s3.amazonaws.com/cloudformation-examples/cloudformation-launch-stack.png)](https://console.aws.amazon.com/cloudformation/home?region=eu-south-1#/stacks/new?stackName=torbridge&templateURL=https://bridgebuttons.s3.amazonaws.com/tor-bridge-cloudformation.yml)              |
+| Europe (Paris)       | [![Create Bridge](https://s3.amazonaws.com/cloudformation-examples/cloudformation-launch-stack.png)](https://console.aws.amazon.com/cloudformation/home?region=eu-west-3#/stacks/new?stackName=torbridge&templateURL=https://bridgebuttons.s3.amazonaws.com/tor-bridge-cloudformation.yml)              |
+| Europe (Stockholm)       | [![Create Bridge](https://s3.amazonaws.com/cloudformation-examples/cloudformation-launch-stack.png)](https://console.aws.amazon.com/cloudformation/home?region=eu-north-1#/stacks/new?stackName=torbridge&templateURL=https://bridgebuttons.s3.amazonaws.com/tor-bridge-cloudformation.yml)              |
+| Middle East (Bahrain)       | [![Create Bridge](https://s3.amazonaws.com/cloudformation-examples/cloudformation-launch-stack.png)](https://console.aws.amazon.com/cloudformation/home?region=me-south-1#/stacks/new?stackName=torbridge&templateURL=https://bridgebuttons.s3.amazonaws.com/tor-bridge-cloudformation.yml)              |
+| Middle East (UAE)       | [![Create Bridge](https://s3.amazonaws.com/cloudformation-examples/cloudformation-launch-stack.png)](https://console.aws.amazon.com/cloudformation/home?region=me-central-1#/stacks/new?stackName=torbridge&templateURL=https://bridgebuttons.s3.amazonaws.com/tor-bridge-cloudformation.yml)              |
+| South America (São Paulo)       | [![Create Bridge](https://s3.amazonaws.com/cloudformation-examples/cloudformation-launch-stack.png)](https://console.aws.amazon.com/cloudformation/home?region=sa-east-1#/stacks/new?stackName=torbridge&templateURL=https://bridgebuttons.s3.amazonaws.com/tor-bridge-cloudformation.yml)              |
